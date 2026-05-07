@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Core Clicker Pro</title>
+    <style>
+        body { margin: 0; display: flex; justify-content: center; align-items: center; height: 100vh; background: #0b0e14; font-family: sans-serif; color: white; overflow: hidden; }
+        .container { text-align: center; background: #161b22; padding: 50px; border-radius: 30px; border: 2px solid #00f2fe; box-shadow: 0 0 30px rgba(0, 242, 254, 0.2); }
+        #score { font-size: 5rem; font-weight: bold; color: #00f2fe; margin: 20px 0; }
+        .btn { padding: 20px 50px; font-size: 1.5rem; background: linear-gradient(90deg, #00f2fe, #4facfe); border: none; border-radius: 15px; color: white; cursor: pointer; font-weight: bold; transition: 0.1s; }
+        .btn:active { transform: scale(0.95); }
+        .back-link { display: block; margin-top: 30px; color: #8b949e; text-decoration: none; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>XAL TOPLA</h1>
+        <div id="score">0</div>
+        <button class="btn" onclick="hit()">KLİKLƏ</button>
+        <a href="../index.html" class="back-link">← Geri qayıt</a>
+    </div>
+
+    <script>
+        let count = 0;
+        function hit() {
+            count++;
+            document.getElementById('score').innerText = count;
+        }
+    </script>
+</body>
+</html>
