@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nexus Games | Müasir Oyun Portalı</title>
+    <title>Nexus Games | Azərbaycan</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
@@ -11,7 +11,7 @@
             --card: #161b22;
             --accent: #00f2fe;
             --text: #e6edf3;
-            --btn-grad: linear-gradient(90deg, #00f2fe 0%, #4facfe 100%);
+            --wa-color: #25D366;
         }
 
         body {
@@ -19,143 +19,118 @@
             color: var(--text);
             font-family: 'Inter', sans-serif;
             margin: 0;
-            padding: 0;
-            scroll-behavior: smooth;
+            text-align: center;
         }
 
         nav {
-            padding: 20px 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: rgba(13, 17, 23, 0.9);
-            backdrop-filter: blur(10px);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
+            padding: 20px;
+            background: rgba(13, 17, 23, 0.95);
             border-bottom: 1px solid #30363d;
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--accent);
+            letter-spacing: 2px;
         }
 
-        .logo { font-size: 24px; font-weight: 800; color: var(--accent); letter-spacing: 1px; }
-
         .hero {
-            text-align: center;
-            padding: 100px 20px;
+            padding: 80px 20px;
             background: radial-gradient(circle at center, rgba(0, 242, 254, 0.1) 0%, transparent 70%);
         }
 
-        .hero h1 { font-size: 3.5rem; margin-bottom: 15px; background: var(--btn-grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero h1 { font-size: 3rem; margin: 0; color: white; }
+        .hero p { color: #8b949e; font-size: 1.2rem; }
 
         .games-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
             gap: 30px;
-            padding: 50px 8%;
+            padding: 40px;
         }
 
         .game-card {
             background: var(--card);
-            border-radius: 24px;
+            border-radius: 25px;
             border: 1px solid #30363d;
-            overflow: hidden;
+            width: 280px;
+            padding: 30px;
             transition: 0.3s;
         }
 
-        .game-card:hover { transform: translateY(-10px); border-color: var(--accent); box-shadow: 0 10px 40px rgba(0, 242, 254, 0.15); }
+        .game-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent);
+            box-shadow: 0 10px 30px rgba(0, 242, 254, 0.2);
+        }
 
-        .game-img { height: 160px; background: #21262d; display: flex; align-items: center; justify-content: center; font-size: 50px; color: var(--accent); }
-
-        .game-info { padding: 25px; }
+        .game-icon { font-size: 50px; color: var(--accent); margin-bottom: 20px; }
 
         .play-btn {
             display: block;
-            width: 100%;
-            padding: 14px;
-            text-align: center;
-            background: var(--btn-grad);
-            color: #fff;
+            background: linear-gradient(90deg, #00f2fe, #4facfe);
+            color: #000;
+            padding: 15px;
             text-decoration: none;
-            border-radius: 14px;
-            font-weight: 700;
-            margin-top: 10px;
+            border-radius: 15px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-top: 20px;
         }
 
         .support-box {
-            margin: 80px 8%;
-            padding: 50px;
+            margin: 60px 20px;
+            padding: 40px;
             background: #161b22;
             border-radius: 30px;
-            border: 1px solid #30363d;
-            text-align: center;
+            border: 2px dashed var(--wa-color);
         }
 
         .wa-btn {
             display: inline-block;
-            background: #25D366;
+            background: var(--wa-color);
             color: white;
             padding: 18px 40px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: bold;
             font-size: 1.2rem;
-            margin-top: 25px;
-            transition: 0.3s;
+            margin-top: 20px;
+            box-shadow: 0 10px 20px rgba(37, 211, 102, 0.2);
         }
 
-        .wa-btn:hover { transform: scale(1.05); box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3); }
-
-        footer { text-align: center; padding: 50px; color: #484f58; border-top: 1px solid #30363d; }
+        footer { padding: 40px; color: #484f58; font-size: 0.9rem; }
     </style>
 </head>
 <body>
 
-    <nav>
-        <div class="logo">NEXUS GAMES</div>
-        <div>
-            <a href="#games" style="color: white; text-decoration: none; margin-right: 25px;">Oyunlar</a>
-            <a href="#support" style="color: white; text-decoration: none;">Dəstək</a>
-        </div>
-    </nav>
+    <nav>NEXUS GAMES</nav>
 
-    <section class="hero">
-        <h1>Oyun Dünyasına Xoş Gəldin</h1>
-        <p style="color: #8b949e; font-size: 1.3rem;">Tamamilə pulsuz, sürətli və maraqlı mini oyunlar bir arada.</p>
-    </section>
+    <div class="hero">
+        <h1>Oyun Dünyası</h1>
+        <p>Sürətli, pulsuz və maraqlı mini oyunlar.</p>
+    </div>
 
-    <div class="games-grid" id="games">
+    <div class="games-grid">
         <div class="game-card">
-            <div class="game-img"><i class="fas fa-mouse-pointer"></i></div>
-            <div class="game-info">
-                <h3>Core Clicker</h3>
-                <p style="color: #8b949e;">Sürətli kliklə və ən yüksək xalı topla!</p>
-                <a href="games/clicker.html" class="play-btn">OYNA</a>
-            </div>
-        </div>
-
-        <div class="game-card" style="opacity: 0.5;">
-            <div class="game-img"><i class="fas fa-plus"></i></div>
-            <div class="game-info">
-                <h3>Yaxında...</h3>
-                <p>Yeni oyunlar hazırlanır.</p>
-                <a href="#" class="play-btn" style="background: #30363d;">Gözlənilir</a>
-            </div>
+            <div class="game-icon"><i class="fas fa-mouse-pointer"></i></div>
+            <h3>Core Clicker</h3>
+            <p style="color: #8b949e;">Ekrana klikləyərək ən yüksək xalı topla!</p>
+            <a href="clicker.html" class="play-btn">OYNA</a>
         </div>
     </div>
 
-    <div class="support-box" id="support">
-        <h2 style="color: var(--accent); font-size: 2.5rem;">Bizə Dəstək Ol 🚀</h2>
-        <p style="color: #8b949e; max-width: 600px; margin: 0 auto;">
-            Bu platformanı tək başıma inkişaf etdirirəm. Yeni oyunların gəlməsi və saytın yaşaması üçün mənə WhatsApp-dan yazaraq dəstək ola bilərsiniz!
-        </p>
+    <div class="support-box">
+        <h2 style="color: var(--wa-color);">Bizə Dəstək Ol 🚀</h2>
+        <p style="color: #8b949e;">Yeni oyunların gəlməsi üçün mənə WhatsApp-dan yazaraq dəstək ola bilərsən!</p>
         
-        <a href="https://wa.me/994XXXXXXXXX?text=Salam,%20Nexus%20Games%20layihənizə%20dəstək%20olmaq%20istəyirəm." 
+        <a href="https://wa.me/994515114568?text=Salam,NexusGames-e-destek-olmaq-isteyirem" 
            target="_blank" class="wa-btn">
             <i class="fab fa-whatsapp"></i> WhatsApp ilə Yaz
         </a>
     </div>
 
     <footer>
-        &copy; 2026 Nexus Games Azerbaijan. Bütün hüquqlar qorunur.
+        &copy; 2026 Nexus Games Azerbaijan.
     </footer>
 
 </body>
